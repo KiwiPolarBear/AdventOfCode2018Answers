@@ -73,7 +73,7 @@ def part_two(input_data: List[str]):
     for index, item in enumerate(input_data):
         match = find_common_ids(item, input_data[index+1:])
         if match:
-            print(''.join([i for i in list(item) if i in list(match)]))
+            print(''.join([i for n, i in enumerate(list(item)) if list(match)[n] == i]))
 
 
 # =====================================================================
